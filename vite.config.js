@@ -1,8 +1,6 @@
 import { resolve } from 'path'
-import template from "art-template"
 import { defineConfig } from "vite"
-
-template.defaults.minimize = false
+import VitePluginArtTemplate from './build/vite-plugin-art-template'
 
 export default defineConfig({
   build: {
@@ -14,25 +12,13 @@ export default defineConfig({
     }
   },
   plugins: [
-    {
-      name: "art-template",
-      transformIndexHtml: {
-        enforce: "pre",
-        transform(html, { path, filename }) {
-          html = template(filename, {})
-          return html
-        },
-      },
-    },
-    {
-      name: "watch-template",
-      apply: "serve",
-      handleHotUpdate({ server }) {
-        server.ws.send({
-          type: "full-reload",
-        })
-        return []
-      },
-    },
+    VitePluginArtTemplate({
+      data(ctx) {
+        return {
+          foo: 'var foo = 123',
+          me: `<div style="color:red">my name is xx</div>`
+        }
+      }
+    })
   ],
 })
