@@ -1,0 +1,21 @@
+{
+  "name": "website-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.pxing.work:inc/pxfe/website-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "vite": "^3.0.0-beta.7"
+  }
+}
