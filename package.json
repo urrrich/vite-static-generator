@@ -1,5 +1,5 @@
 {
-  "name": "website-landing-page",
+  "name": "vite-static-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.pxing.work:inc/pxfe/website-landing-page.git"
+    "url": "git@github.com:urrrich/vite-static-generator.git"
   },
   "author": "",
   "license": "ISC",
